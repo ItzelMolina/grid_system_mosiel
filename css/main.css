@@ -1,0 +1,69 @@
+/*para que todo quede adentro del container uso box-sizing*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  margin: 0 auto; /*para centrar el contenido.*/
+  max-width: 1200px; /*defino ambos width en pocentaje y pixeles*/
+  width: 100%; /*ó 1200px para hacerlo fijo.*/
+}
+
+/*Un content con espacio vacío que se agregue
+al inicio y al final de las filas*/
+.row::before,
+.row::after {
+  content: " ";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+/*Ya comienza el uso de pseudoselectores*/
+[class*="col-"] {
+  border: 3px solid white; /*se le agrega el borde y va a respetar el porcentaje total*/
+  height: 100px; /*tamaño estandar es 7px*/
+  float: left;
+  padding: 12px; /*espacio de los gutters*/
+}
+
+.col-1 {
+  background-color:#FFFF00 ;
+  width: 8.33%;
+
+}
+
+.col-2 {
+  background-color: #AFFF00;
+  width: 16.66%;
+}
+
+.col-3 {
+  background-color: #1EE2A6;
+  width: 25%;
+}
+.col-4 {
+  background-color: #01B6AD;
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  background-color:#9C42D1;
+  width: 50%;
+}
+
+.col-12 {
+  background-color: #D126A9;
+  width: 100%;
+}
